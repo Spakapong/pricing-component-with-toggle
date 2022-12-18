@@ -12,41 +12,102 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
   </style>
 </head>
 <body>
+  <h1 id="heading">Our Pricing</h1>
+  <div class="toggle-switch">
+    <h2>Annually</h2>
+    <h2>Monthly</h2>
+  </div>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
 
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
+  <div class="container">
+    <div class="card">
+      <h2>Basic</h2>
+      <h3 class="prices" id="price1">&dollar;19.99</h3>
+      <h4>500 GB Storage</h4>
+      <h4>2 Users Allowed</h4>
+      <h4>Send up to 3 GB</h4>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="card center">
+      <h2>Professional</h2>
+      <h3 class="prices" id="price2">&dollar;24.99</h3>
+      <h4>1 TB Storage</h4>
+      <h4>5 Users Allowed</h4>
+      <h4>Send up to 10 GB</h4>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="card">
+      <h2>Master</h2>
+      <h3 class="prices" id="price3">&dollar;39.99</h3>
+      <h4>2 TB Storage</h4>
+      <h4>10 Users Allowed</h4>
+      <h4>Send up to 20 GB</h4>
+      <button class="btn">Learn More</button>
+    </div>
+  </div>
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    Coded by <a href="#">Pakapng S.</a>
   </div>
 </body>
 </html>
