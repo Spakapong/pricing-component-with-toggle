@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Pricing Component with toggle</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -16,8 +22,9 @@
     .switch {
       position: relative;
       display: inline-block;
-      width: 60px;
-      height: 34px;
+      width: 50px;
+      height: 28px;
+      margin: 0 10px;
     }
     .switch input { 
       opacity: 0;
@@ -38,8 +45,8 @@
     .slider:before {
       position: absolute;
       content: "";
-      height: 26px;
-      width: 26px;
+      height: 20px;
+      width: 20px;
       left: 4px;
       bottom: 4px;
       background-color: white;
@@ -47,15 +54,15 @@
       transition: .4s;
     }
     input:checked + .slider {
-      background-color: #2196F3;
+      background-color: hsl(237, 63%, 64%);
     }
     input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
+      box-shadow: 0 0 1px hsl(237, 63%, 64%);
     }
     input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px);
     }
     /* Rounded sliders */
     .slider.round {
@@ -70,37 +77,38 @@
 <body>
   <h1 id="heading">Our Pricing</h1>
   <div class="toggle-switch">
-    <h2>Annually</h2>
-    <h2>Monthly</h2>
+    <h6>Monthly</h6> 
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+    <h6>Annually</h6> 
   </div>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>
+
 
   <div class="container">
     <div class="card">
       <h2>Basic</h2>
-      <h3 class="prices" id="price1">&dollar;19.99</h3>
-      <h4>500 GB Storage</h4>
-      <h4>2 Users Allowed</h4>
-      <h4>Send up to 3 GB</h4>
+      <h3 class="prices" id="price1"><span class="dollar">&dollar;</span>19.99</h3>
+      <h4 class="bord-btm">500 GB Storage</h4>
+      <h4 class="bord-btm">2 Users Allowed</h4>
+      <h4 class="bord-btm">Send up to 3 GB</h4>
       <button class="btn">Learn More</button>
     </div>
     <div class="card center">
       <h2>Professional</h2>
-      <h3 class="prices" id="price2">&dollar;24.99</h3>
-      <h4>1 TB Storage</h4>
-      <h4>5 Users Allowed</h4>
-      <h4>Send up to 10 GB</h4>
+      <h3 class="prices mss" id="price2"><span class="dollar mss">&dollar;</span>24.99</h3>
+      <h4 class="bord-btm mss">1 TB Storage</h4>
+      <h4 class="bord-btm mss">5 Users Allowed</h4>
+      <h4 class="bord-btm mss">Send up to 10 GB</h4>
       <button class="btn">Learn More</button>
     </div>
     <div class="card">
       <h2>Master</h2>
-      <h3 class="prices" id="price3">&dollar;39.99</h3>
-      <h4>2 TB Storage</h4>
-      <h4>10 Users Allowed</h4>
-      <h4>Send up to 20 GB</h4>
+      <h3 class="prices" id="price3"><span class="dollar">&dollar;</span>39.99</h3>
+      <h4 class="bord-btm">2 TB Storage</h4>
+      <h4 class="bord-btm">10 Users Allowed</h4>
+      <h4 class="bord-btm">Send up to 20 GB</h4>
       <button class="btn">Learn More</button>
     </div>
   </div>
