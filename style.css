@@ -89,7 +89,8 @@ h4 {
 .btn {
     cursor: pointer;
     background-color: transparent;
-    border: 1px black solid;
+    color: hsl(232, 13%, 33%);
+    border: 1px hsl(232, 13%, 33%) solid;
     border-radius: 5px;
     width: 100%;
     padding: 10px;
@@ -107,4 +108,27 @@ h4 {
 .center .mss{
     color: hsl(240, 78%, 98%);
     border-color: hsl(234, 14%, 74%);
+}
+
+@media screen and (max-width: 415px) {
+    .container {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .center {
+        margin: 15px 0;
+    }
+    .btn {
+        color: hsl(240, 78%, 98%);
+        background-color: hsl(237, 63%, 64%);
+        border: none;
+    }
+    .center .btn{
+        color: hsl(237, 63%, 64%);
+        background-color: hsl(240, 78%, 98%);;
+        margin-bottom: 0px;
+    }
 }
